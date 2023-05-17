@@ -4,6 +4,8 @@ import { ImMenu } from "react-icons/im";
 import { ImSpoonKnife } from "react-icons/im";
 
 import React from 'react'
+import { Link } from "react-router-dom";
+
  class Navbar extends Component {
 
     state={clicked :false};
@@ -14,19 +16,20 @@ import React from 'react'
     render(){
         return (
             <>
-            
+         
             <nav>
           
                 <a className="name"><ImSpoonKnife/>  Foof Leaf</a>
                
                 <div className="">
                     <ul id="navbar" className={this.state.clicked ? "#navbar active" : "#navbar"}>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Video</a></li>
-                        <li><a href="#">Contact</a></li> 
-                        <li><button>Login</button></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                       
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/register">Register</Link></li>
+                      
+                        {/* <li><button>Login</button></li> */}
                       
                   
                     </ul>
